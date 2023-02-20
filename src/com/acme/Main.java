@@ -61,14 +61,14 @@ public class Main {
      * If the parentheses do not match or the stack is empty when encountering a closing parenthesis, the algorithm returns false.
      * Finally, if the stack is empty after processing the entire string, the algorithm returns true.
      *
-     * @param s String of code
+     * @param stringToTest String of code
      * @return boolean for validity
      */
-    public static boolean isValidParentheses(String s) {
+    public static boolean isValidParentheses(String stringToTest) {
         Stack<Character> stack = new Stack<>();
-
-        for (int i = 0; i < s.length(); i++) {
-            char c = s.charAt(i);
+        char[] arr = stringToTest.toCharArray();
+        for (int i = 0; i < stringToTest.length(); i++) {
+            char c = arr[i];
             if (c == '(') {
                 stack.push(c);
             } else if (c == ')') {
