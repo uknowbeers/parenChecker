@@ -2,7 +2,7 @@ package com.acme;
 
 import java.util.Stack;
 
-public class Main {
+public class CheckLispCode {
 
     public static void main(String[] args) {
 
@@ -75,8 +75,8 @@ public class Main {
                 if (stack.isEmpty()) {
                     return false;
                 }
-                char top = stack.pop();
-                if (top != '(') {
+                char topCharacter = stack.pop();
+                if (topCharacter != '(') {
                     return false;
                 }
             }
